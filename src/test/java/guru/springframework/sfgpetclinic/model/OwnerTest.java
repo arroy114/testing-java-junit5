@@ -13,6 +13,7 @@ class OwnerTest implements ModelTests {
     @Test
     void dependentAssertions() {
 
+        //Owner extends Person with extra properties city and telephone
         Owner owner = new Owner(1l, "Joe", "Buck");
         owner.setCity("Key West");
         owner.setTelephone("1231231234");

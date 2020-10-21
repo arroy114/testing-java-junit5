@@ -35,11 +35,11 @@ class IndexControllerTest implements ControllerTests {
     }
 
     @Test
-    @DisplayName("Test exception")
-    void oupsHandler() {
-        assertThrows(ValueNotFoundException.class, () -> {
-            controller.oopsHandler();
-        });
+    void testException() {
+        assertThrows(ValueNotFoundException.class,
+                () -> {
+                    controller.oopsHandler();
+                });
     }
 
     @Disabled("Demo of timeout")
@@ -49,7 +49,6 @@ class IndexControllerTest implements ControllerTests {
         assertTimeout(Duration.ofMillis(100), () -> {
             Thread.sleep(5000);
 
-            System.out.println("I got here");
         });
     }
 
